@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 const storageName = 'userData'
 
@@ -12,7 +12,7 @@ export const useAuth = () => {
         setUserId(id)
 
         localStorage.setItem(storageName, JSON.stringify({
-            userId, token
+            userId: id, token: jwtToken
         }))
     }, [])
 
