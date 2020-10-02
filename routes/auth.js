@@ -16,6 +16,7 @@ router.post('/register',
     ],
     async (req, res) => {
     try{
+        console.log('Body', req.body)
         const errors = validationResult(req)
 
         if(!errors.isEmpty()) {
@@ -32,15 +33,15 @@ router.post('/register',
         if(candidate) {
             return res.status(400).json({message: 'This user has been created'})
         }
-        const hashedPassword = await bcrypt.hash(password, 69)
+        const hashedPassword = await bcrypt.hash(password, 11)
         const user = new User({ email, password: hashedPassword})
 
         await user.save()
 
-        res.status(201).json({message: 'User created !'})
+        return res.status(201).json({message: 'User created !'})
 
     } catch (e) {
-        res.status(500),json({ message: 'Something went wrong, try again'})
+        res.status(500).json({ message: 'Something went wrong, try again'})
     }
 
 })
@@ -87,7 +88,7 @@ router.post('/login',
         
 
     } catch (e) {
-        res.status(500),json({ message: 'Something went wrong, try again'})
+        res.status(500).json({ message: 'Something went wrong, try again'})
     }
 
 })

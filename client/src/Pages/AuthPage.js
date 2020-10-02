@@ -40,7 +40,7 @@ function AuthPage() {
                                 placeholder="Enter your email"
                                 id="email"
                                 type="text"
-                                name='password'
+                                name='email'
                                 onChange={changeHandler}
                             />
                              <label htmlFor="email">Email</label>
