@@ -10,6 +10,8 @@ function AuthPage() {
         setForm({...form, [e.target.name]: e.target.value})
     }
 
+    
+
     return (
         <div className='row'>
             <div className='col s6 offset-s3'>
