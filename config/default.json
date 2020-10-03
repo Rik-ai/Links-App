@@ -1,5 +1,6 @@
 {
     "port":5000,
     "jwtSecret": "js react fullstack",
-    "mongoUri": "mongodb+srv://Ivan:K41WuS3yiaTV9WE7@cluster0.unsby.mongodb.net/LinksApp?retryWrites=true&w=majority"
+    "mongoUri": "mongodb+srv://Ivan:K41WuS3yiaTV9WE7@cluster0.unsby.mongodb.net/LinksApp?retryWrites=true&w=majority",
+    "baseUrl": "http://localhost:5000"
 }
